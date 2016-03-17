@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+<script>
+function outerFunction()
+{
+	var a = "a";
+	alert("Currently inside OuterFunction");
+	function innerFunction()
+	{
+	var b = "b";
+	alert("Inside innerFunction and accessing the variable of parent" + a);
+	alert("Inside innerFunction and accessing its own variable" + b);
+	
+	}
+	
+	innerFunction();
+}
+outerFunction();
+
+
+innerFunction(); //Throws error as function not defined
+
+
+
+</script>
+</body>
+</html>
